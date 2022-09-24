@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: unb_pro_light
+font link: http://www.marca.unb.br/fontesunb.php
+font author: Universidade de Brasilia
+font author site: http://www.marca.unb.br/introducao.php
+
+
+icon designer: Cezary Lopacinski
+icon designer link: /cezarylopacinski
+        
+{"bg-gradient-0":"#D0A070","bg-gradient-1":"#6BE371","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
