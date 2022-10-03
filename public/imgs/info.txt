@@ -1,14 +1,14 @@
 
 Hope you enjoy your new logo, here are the people that
 made your beautiful logo happen :)
-font name: unb_pro_light
-font link: http://www.marca.unb.br/fontesunb.php
-font author: Universidade de Brasilia
-font author site: http://www.marca.unb.br/introducao.php
+font name: ostrich-regular
+font link: https://www.fontsquirrel.com/fonts/ostrich-sans
+font author: Tyler Finck
+font author site: https://www.tylerfinck.com
 
 
 icon designer: Cezary Lopacinski
 icon designer link: /cezarylopacinski
         
-{"bg-gradient-0":"#D0A070","bg-gradient-1":"#6BE371","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+{"bg":"transparent","icon-gradient-0":"#21690F","icon-gradient-1":"#88C848","font":"#000000","slogan":"#141414"}
       
