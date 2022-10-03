@@ -2,7 +2,13 @@ const cloudinary = require("../middleware/cloudinary");
 const Profile = require("../models/Profile");
 
 module.exports = {
-
+  getUserInfo: async (req, res) => {
+    try {
+      res.render("userInfo.ejs", { user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   createProfile: async (req, res) => {
     try {
       // Upload image to cloudinary
@@ -15,7 +21,7 @@ module.exports = {
         cloudinaryId: result.public_id,
         user: req.user.id,
       });
-      console.log("Post has been added!");
+      console.log("User Info has been added!");
       res.redirect("/profile");
     } catch (err) {
       console.log(err);
