@@ -1,7 +1,7 @@
 {
-  "name": "binary-upload-boom",
+  "name": "ProjectSOP",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "Submit SOPs to build KnowledgeBase",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

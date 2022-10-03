@@ -1,43 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Return from Nature</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/imgs/favicon-32x32.png"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container">
-              <a class="navbar-brand" href="/">Return from Nature</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
-                  </ul>
-              </div>
-          </div>
-      </nav>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project SOP</title>
+  <meta name="description" content="An application for the creation and storage of SOPs">
+  <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
+  <link rel="canonical" href="https://picocss.com/examples/sign-in/">
+
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+  <!-- Custom styles for this example -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    
+  <nav class="container-fluid">
+    <ul>
+      <li><a href="/" class="contrast" onclick="event.preventDefault()"><strong>Project SOP</strong></a></li>
+    </ul>
+    <ul>
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link" class="secondary">Light/Dark</summary>
+          <ul role="listbox">
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details role="list" dir="rtl">
+          <summary aria-haspopup="listbox" role="link" class="secondary">Navigation</summary>
+          <ul role="listbox">
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signUp">Sign Up</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contactUs">Contact Us</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>

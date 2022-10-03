@@ -3,17 +3,20 @@
   <div class="row mt-5">
       <div class="col-6">
           <div>
-              <p><strong>Welcome</strong>: <%= user.firstName %> <%= user.lastName %></p>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
           </div>
           <div class="mt-5">
             <h2>Add a post</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
+                  <label for="city" class="form-label">City</label>
+                  <input type="text" class="form-control" id="city" name="city">
               </div>
+              <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" id="country" name="country">
+            </div>
               <div class="mb-3">
                 <label for="caption" class="form-label">Caption</label>
                 <textarea class="form-control" id="caption" name="caption"></textarea>
@@ -32,7 +35,9 @@
           <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
+              
             </a>
+            <span><%= posts[i].caption%></span>
           </li>
         <% } %>
         </ul>
