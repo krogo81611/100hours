@@ -21,20 +21,19 @@
             <a href="/knowledgeBase"><button class="proBtn">Search Knowledge Base</button></a>
           </section>
 
-          <div class="profilePost">
-            <ul class="row list-unstyled">
-            <% for(var i=0; i<posts.length; i++) {%>
-              <li class="col-6 justify-content-between mt-5">
+        <section class="container flex ">
+        
+        <% for(var i=0; i<posts.length; i++) {%> 
+          <div class="profilePost profileBorder alignCenter">                         
                 <a href="/post/<%= posts[i]._id%>">
-                  <img class="img-fluid" src="<%= posts[i].image%>">
-                </a>
-              </li>
-            <% } %>
-            </ul>
-            <div class="row justify-content-center mt-5">
-              <a class="btn btn-primary" href="/feed">Return to Knowledge Base</a>
-            </div>  
-          </div>  
+                    <span class="alignCenter"><%= posts[i].issueType%><br></span>
+                    <span class="alignCenter"><%= posts[i].title%><br></span>                    
+                    <span class="alignCenter"><%= posts[i].briefDescription%><br></span>
+                  <img class="profileImg" src="<%= posts[i].image%>">
+                </a>            
+           </div>
+        <% } %> 
+        </section> 
         </div>
       </div>
     </div>

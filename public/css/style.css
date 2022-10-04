@@ -101,10 +101,11 @@ body > footer {
 }
 .flex{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .profilePost{
-  height: 300px;
+  height: 250px;
   width: 300px;
 }
 .postBtn{
@@ -112,4 +113,28 @@ body > footer {
 }
 .half{
   width: 50%;
+}
+li{
+  list-style: none;
+}
+.profileImg{
+  height: 100px
+}
+.profileBorder{
+  border: 3px solid rgb(53, 150, 195);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+.header{
+  position: fixed;
+  top: 0;
 }
