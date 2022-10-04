@@ -60,6 +60,7 @@ app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 app.use("/comment", commentRoutes);
 app.use("/about", mainRoutes);
+app.use("/contactUs", mainRoutes)
 app.use("/userInfo", profileRoutes)
 
 //Server Running

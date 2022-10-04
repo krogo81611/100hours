@@ -1,5 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const Profile = require("../models/Profile");
+const Post = require("../models/Post")
 
 module.exports = {
   getUserInfo: async (req, res) => {
