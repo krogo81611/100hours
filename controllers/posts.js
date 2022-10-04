@@ -13,10 +13,20 @@ module.exports = {
       console.log(err);
     }
   },
-  getFeed: async (req, res) => {
+  getSOP: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id });
+      res.render("sop.ejs", { posts: posts, user: req.user });
+
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getKnowledgeBase: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
-      res.render("feed.ejs", { posts: posts });
+
+      res.render("library.ejs", { posts: posts });
     } catch (err) {
       console.log(err);
     }
@@ -36,11 +46,12 @@ module.exports = {
       const result = await cloudinary.uploader.upload(req.file.path);
 
       await Post.create({
-        city: req.body.city,
-        country: req.body.country,
+        issueType: req.body.issueType,
+        title: req.body.issueType,
+        briefDescription: req.body.briefDescription,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
+        steps: req.body.steps,
         likes: 0,
         user: req.user.id,
       });
@@ -59,6 +70,20 @@ module.exports = {
         }
       );
       console.log("Likes +1");
+      res.redirect(`/post/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  dislikePost: async (req, res) => {
+    try {
+      await Post.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          $dec: { likes: 1 },
+        }
+      );
+      console.log("Likes -1");
       res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);

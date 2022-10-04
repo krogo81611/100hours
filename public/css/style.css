@@ -85,7 +85,7 @@ body > footer {
 .homeContainer {
   margin: 300px auto;
 }
-.homeBtn{
+.homeBtn, .proBtn{
   width: 400px;
   margin: 20px auto
 }
@@ -98,4 +98,18 @@ body > footer {
 }
 .alignCenter{
   text-align: center;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.profilePost{
+  height: 300px;
+  width: 300px;
+}
+.postBtn{
+  width: 100px;
+}
+.half{
+  width: 50%;
 }

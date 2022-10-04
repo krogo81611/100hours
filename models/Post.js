@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-  city: {
+  issueType: {
     type: String,
     required: true,
   },
-  country: {
+  title: {
+    type: String,
+    required: true,
+  },
+  briefDescription: {
     type: String,
     required: true,
   },
@@ -17,7 +21,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  steps: {
     type: String,
     required: true,
   },
@@ -35,4 +39,7 @@ const PostSchema = new mongoose.Schema({
   },
 });
 
+
+
 module.exports = mongoose.model("Post", PostSchema);
+

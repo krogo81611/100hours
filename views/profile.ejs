@@ -1,11 +1,43 @@
 <%- include('partials/loggedHeader') -%>
 
-          <div class="container">
+          <div class="container flex">
+            <section>
               <h1>Welcome!</h1>
-              <p><%= user.firstName %> <%= user.lastName %></p>             
+              <h4><%= user.firstName %> <%= user.lastName %></h4>
+            </section>
+            <section>          
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
+            </section> 
           </div>
+
+          <section class="container">
+            <p>This dashboard will show all documents created by you.</p>
+            <p>It is also where you can navigate to create documents, or search the knowledge base.</p>
+          </section>
+
+          <section class="container flex">
+            <a href="/sop"><button class="proBtn">Create SOP</button></a>
+            <a href="/knowledgeBase"><button class="proBtn">Search Knowledge Base</button></a>
+          </section>
+
+          <div class="profilePost">
+            <ul class="row list-unstyled">
+            <% for(var i=0; i<posts.length; i++) {%>
+              <li class="col-6 justify-content-between mt-5">
+                <a href="/post/<%= posts[i]._id%>">
+                  <img class="img-fluid" src="<%= posts[i].image%>">
+                </a>
+              </li>
+            <% } %>
+            </ul>
+            <div class="row justify-content-center mt-5">
+              <a class="btn btn-primary" href="/feed">Return to Knowledge Base</a>
+            </div>  
+          </div>  
+        </div>
+      </div>
+    </div>
 
 
 <%- include('partials/footer') -%>
