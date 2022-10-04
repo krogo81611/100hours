@@ -11,11 +11,6 @@ exports.getLogin = (req, res) => {
   });
 };
 
-exports.getAbout = (req, res) => {
-  res.render("about", {
-    title: "About",
-  });
-};
 
 exports.postLogin = (req, res, next) => {
   const validationErrors = [];
